@@ -31,7 +31,7 @@ Vue.component('jumbotron', require('./components/layout/Jumbotron.vue').default)
 Vue.component('navigation-bar', require('./components/layout/Navbar.vue').default)
 Vue.component('partners', require('./components/layout/Partners.vue').default)
 Vue.component('news-events', require('./components/layout/NewsEvents.vue').default)
-
+Vue.component('home-carousel', require('./components/layout/HomeCarousel.vue').default)
 
 /**
  * Page Views

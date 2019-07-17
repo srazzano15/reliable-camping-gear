@@ -5,7 +5,11 @@
         <partners></partners>
       </b-col>
       <b-col md="8">
-
+        <b-row>
+          <b-col md="8" offset-md="2">
+            <home-carousel></home-carousel>
+          </b-col>
+        </b-row>
       </b-col>
       <b-col md="2">
         <news-events></news-events>
@@ -16,7 +20,8 @@
 
 <script>
 import { partners } from "../layout/Partners";
-import { newsEvents } from "../layout/NewsEvents"
+import { newsEvents } from "../layout/NewsEvents";
+import { homeCarousel } from "../layout/HomeCarousel"
 
 export default {
   
