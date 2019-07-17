@@ -1,0 +1,11 @@
+/**
+ ** Designed to override default Bootstrap style utilities.
+ **
+ ** Author: Steve Razzano
+**/
+.nav__custom {
+  transition: all .25s ease-in-out !important;
+  &:hover {
+    text-decoration: underline
+  }
+}
