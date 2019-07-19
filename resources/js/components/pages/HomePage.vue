@@ -7,7 +7,7 @@
       <b-col md="8">
         <b-row>
           <b-col md="8" offset-md="2">
-            <home-carousel></home-carousel>
+            
           </b-col>
         </b-row>
       </b-col>

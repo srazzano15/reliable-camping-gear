@@ -1,22 +1,32 @@
 <template>
-  <b-navbar class="py-1 bg-secondary ">
+  <b-navbar class="py-1 bg-secondary align-items-start">
     <b-navbar-brand href="/">
-      <img :src="brandLogo" alt="Reliable Camping Gear Logo">
+      <img 
+        :src="brandLogo"
+        class="logo__main"
+      >
     </b-navbar-brand>
 
-    <b-navbar-nav class="mr-3 text-white" v-for="(item, index) in nav" :key="index">
-      <b-nav-item :href="item.href" class="nav__custom white">{{ item.text }}</b-nav-item>
+    <b-navbar-nav class="mr-3 mt-1 text-white" v-for="(item, index) in nav" :key="index">
+      <b-nav-item 
+        :href="item.href" 
+        class="nav__custom white"
+      >{{ item.text }}</b-nav-item>
     </b-navbar-nav>
 
-    <b-navbar-nav class="mr-3 text-white">
-      <b-nav-item href="#" class="nav__custom " @click="modalHandler">Contact</b-nav-item>
+    <b-navbar-nav class="mr-3 mt-1 text-white">
+      <b-nav-item 
+        href="#" 
+        class="nav__custom " 
+        @click="modalHandler"
+      >Contact</b-nav-item>
     </b-navbar-nav>
 
-    <b-navbar-nav class="mr-1  ml-auto text-white">
+    <b-navbar-nav class="mr-1 mt-1 ml-auto text-white">
       <b-nav-item href="#" target="_blank"><i class="fab fa-facebook-square icon__custom"></i></b-nav-item>
     </b-navbar-nav>
     
-    <b-navbar-nav class="mr-1 text-white">
+    <b-navbar-nav class="mr-1 mt-1 text-white">
       <b-nav-item href="#" target="_blank"><i class="fab fa-instagram icon__custom"></i></b-nav-item>
     </b-navbar-nav>
 
@@ -70,5 +80,11 @@ export default {
   }
   .navbar-light .navbar-nav .nav-link {
     color: white;
+  }
+  .logo__main {
+    height: 17vh
+  }
+  .nav__custom {
+    font-size: 1.25em;
   }
 </style>

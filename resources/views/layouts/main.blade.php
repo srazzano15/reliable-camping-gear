@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Reliable Camping Gear') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,9 +20,10 @@
 </head>
 <body>
     <div id="app">
-		<jumbotron></jumbotron>
+        <navigation-bar brand-logo="{{ asset('assets/images/logos/RCG_logo_250x250.png') }}"></navigation-bar>
+        <jumbotron></jumbotron>
         
-        <navigation-bar brand-logo="{{ asset('assets/images/logos/RCG_logo_cropped.png') }}"></navigation-bar>
+        
 
         @yield('content')
 

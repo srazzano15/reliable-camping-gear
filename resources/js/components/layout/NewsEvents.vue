@@ -3,7 +3,8 @@
 		<b-card 
       no-body 
       header="News and Events"
-
+			bg-variant="rcg-purple"
+			
     >
 			<b-list-group flush>
 				<b-list-group-item
@@ -25,6 +26,7 @@
             <b-button 
               target="_blank" 
               :href="item.href"
+							variant="rcg-blue"
             >Go There Now</b-button>
           </div>
           

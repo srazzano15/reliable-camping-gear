@@ -3,6 +3,7 @@
 		<b-card 
       no-body 
       header="Where to Buy"
+			bg-variant="rcg-purple"
     >
 			<b-list-group flush>
 				<b-list-group-item
