@@ -4,6 +4,7 @@
       no-body 
       header="Where to Buy"
 			bg-variant="rcg-purple"
+			class="ml-1"
     >
 			<b-list-group flush>
 				<b-list-group-item
@@ -73,4 +74,5 @@
     font-weight: 600;
     padding: .2rem 1.25rem;
   }
+
 </style>

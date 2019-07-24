@@ -5,5 +5,7 @@
 @endsection
 
 @section('content')
+  <jumbotron></jumbotron>
+
   <home-page></home-page>
 @endsection

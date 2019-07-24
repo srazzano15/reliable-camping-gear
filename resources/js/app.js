@@ -32,6 +32,7 @@ Vue.component('navigation-bar', require('./components/layout/Navbar.vue').defaul
 Vue.component('partners', require('./components/layout/Partners.vue').default)
 Vue.component('news-events', require('./components/layout/NewsEvents.vue').default)
 Vue.component('home-carousel', require('./components/layout/HomeCarousel.vue').default)
+Vue.component('testimonials', require('./components/layout/Testimonials.vue').default)
 
 /**
  * Page Views

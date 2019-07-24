@@ -18,6 +18,9 @@
 Route::get('/', function () {
     return view('pages.index');
 });
+Route::get('/products', function () {
+    return view('pages.products');
+});
 
 Auth::routes();
 

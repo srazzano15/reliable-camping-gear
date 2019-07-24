@@ -6,8 +6,9 @@
       </b-col>
       <b-col md="8">
         <b-row>
-          <b-col md="8" offset-md="2">
-            
+          <b-col>
+            <h2 class="mt-2 section__header text-center">Testimonials</h2>
+            <testimonials></testimonials>
           </b-col>
         </b-row>
       </b-col>
@@ -22,7 +23,8 @@
 import { partners } from "../layout/Partners";
 import { newsEvents } from "../layout/NewsEvents";
 import { homeCarousel } from "../layout/HomeCarousel"
-
+import { testimonials } from "../layout/Testimonials"
+ 
 export default {
   
 }
@@ -32,4 +34,10 @@ export default {
   .white {
     background-color: white;
   }
+  .section__header {
+    font-weight: 600;
+    font-size: 2.5em;
+    text-transform: uppercase
+  }
+  
 </style>

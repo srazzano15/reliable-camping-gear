@@ -1,9 +1,9 @@
 <template>
-  <b-navbar class="py-1 bg-secondary align-items-start">
+  <b-navbar sticky class="py-1 bg-secondary align-items-start">
     <b-navbar-brand href="/">
       <img 
         :src="brandLogo"
-        class="logo__main"
+        :class="scroll > 80 ? 'logo__scrolling' : 'logo__main'"
       >
     </b-navbar-brand>
 
@@ -17,7 +17,7 @@
     <b-navbar-nav class="mr-3 mt-1 text-white">
       <b-nav-item 
         href="#" 
-        class="nav__custom " 
+        class="nav__custom" 
         @click="modalHandler"
       >Contact</b-nav-item>
     </b-navbar-nav>
@@ -34,7 +34,6 @@
       <b-form-input class="p-2 m-2" placeholder="Search Site" size="sm"></b-form-input>
       <b-button variant="outline-light" class="mx-2" type="submit" size="sm">Search</b-button>
     </b-nav-form>
-    
   </b-navbar>
 </template>
 
@@ -54,21 +53,50 @@ export default {
           href: '/products'
         },
         {
-          text: 'About Us',
-          href: '/about'
-        },
-        {
           text: 'Where To Buy',
           href: '/purchase'
         },
-        
-      ]
+        {
+          text: 'Company',
+          href: '/about'
+        },
+      ],
+      scroll: 0,
+      hasScrolled: false
     }
+  },
+  computed: {
+    
   },
   methods: {
     modalHandler() {
       this.modal = !this.modal
+    },
+    scrolled() {
+      // get current scroll position
+      const currentPosition = window.pageYOffset || document.documentElement.scrollTop
+
+      // accounting for scroll momentum on mobile devices
+      if (currentPosition < 0 ) {
+        return
+      }
+
+      // Stop executing this function if the difference between
+      // current scroll position and last scroll position is less than some offset
+      if (Math.abs(currentPosition - this.scroll) < 60) {
+        return
+      }
+
+      this.hasScrolled = currentPosition < this.scroll
+
+      this.scroll = currentPosition
     }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.scrolled)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.scrolled)
   }
 }
 </script>
@@ -82,9 +110,16 @@ export default {
     color: white;
   }
   .logo__main {
-    height: 17vh
+    height: 15vh;
+    transition: height .3s ease-in-out
   }
   .nav__custom {
     font-size: 1.25em;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+  }
+  .logo__scrolling {
+    height: 8vh;
+    transition: height .3s ease-in-out
   }
 </style>

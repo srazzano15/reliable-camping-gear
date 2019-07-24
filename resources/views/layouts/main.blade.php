@@ -21,13 +21,10 @@
 <body>
     <div id="app">
         <navigation-bar brand-logo="{{ asset('assets/images/logos/RCG_logo_250x250.png') }}"></navigation-bar>
-        <jumbotron></jumbotron>
-        
-        
 
         @yield('content')
 
-        <vue-footer></vue-footer>
+        <vue-footer brand-logo="{{ asset('assets/images/logos/RCG_logo_250x250.png') }}"></vue-footer>
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

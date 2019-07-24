@@ -4,7 +4,7 @@
       no-body 
       header="News and Events"
 			bg-variant="rcg-purple"
-			
+			class="mr-1"
     >
 			<b-list-group flush>
 				<b-list-group-item
@@ -62,7 +62,7 @@
 	};
 </script>
 
-<style>
+<style scoped>
   .card-header {
     font-size: 1.3em;
     text-align: center;
