@@ -1,0 +1,22 @@
+/**
+ ** Utility Classes
+**/
+
+/** Accounting for v-cloaking **/
+[v-cloak] {
+  display: none;
+}
+
+/** Spacing **/
+.rcg__pad--h-5 {
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+.rcg__pad--h-8 {
+  padding-left: 8% !important;
+  padding-right: 8% !important;
+}
+.rcg__pad--h-10 {
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}

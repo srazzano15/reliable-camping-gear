@@ -19,7 +19,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div id="app" v-cloak class="bg-secondary">
         <navigation-bar brand-logo="{{ asset('assets/images/logos/RCG_logo_250x250.png') }}"></navigation-bar>
 
         @yield('content')

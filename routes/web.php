@@ -18,9 +18,16 @@
 Route::get('/', function () {
     return view('pages.index');
 });
-Route::get('/products', function () {
-    return view('pages.products');
+Route::get('/partners', function () {
+    return view('pages.partners');
 });
+Route::get('/testimonials', function () {
+    return view('pages.testimonials');
+});
+Route::get('/about', function () {
+    return view('pages.about');
+});
+
 
 Auth::routes();
 

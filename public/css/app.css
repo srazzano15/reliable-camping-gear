@@ -12522,3 +12522,61 @@ input[type=color].form-control:disabled {
   opacity: 50;
 }
 
+/**
+ ** RCG Custom Text Container Styles
+**/
+
+.rcg__media__list--main {
+  line-height: 1.7;
+  letter-spacing: 0.8px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+.rcg__media__list--main:not(:last-child) {
+  border-bottom: 1px solid lightgray;
+}
+
+.rcg__header {
+  font-weight: 600;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+  border-bottom: 3px solid var(--rcg-dark);
+  text-transform: uppercase;
+}
+
+.rcg__paragraph {
+  line-height: 2;
+  letter-spacing: 1.2px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+}
+
+/**
+ ** Utility Classes
+**/
+
+/** Accounting for v-cloaking **/
+
+[v-cloak] {
+  display: none;
+}
+
+/** Spacing **/
+
+.rcg__pad--h-5 {
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
+.rcg__pad--h-8 {
+  padding-left: 8% !important;
+  padding-right: 8% !important;
+}
+
+.rcg__pad--h-10 {
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}
+

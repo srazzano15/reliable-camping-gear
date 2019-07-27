@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-  <products-page></products-page>
+    <testimonial-page class="bg-white"></testimonial-page>
 @endsection

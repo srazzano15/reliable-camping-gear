@@ -1,30 +1,27 @@
 <template>
-  <ul class="list-unstyled m-3">
+  <ul class="list-unstyled m-3 rcg__pad--h-5">
     <b-media 
       tag="li"
       v-for="(item, i) in testimonials"
       :key="i"
       :right-align="item.alignRight"
-      class="p-3 testimonial__custom"
+      class="p-3 rcg__media__list--main"
+      vertical-align="center"
     >
-      
-        <b-img
-          slot="aside"
-          width="250"
-          height="auto"
-          :src="item.img"
+      <b-img
+        slot="aside"
+        width="250"
+        height="auto"
+        :src="item.img"
+        fluid
       ></b-img>
       
-
-      
-        <blockquote class="blockquote mb-0">
-          <p>{{ item.body }}</p>
-          <footer class="blockquote-footer">
-            <cite>{{ item.citation }}</cite>
-          </footer>
-        </blockquote>
-     
-
+      <blockquote class="blockquote mb-0">
+        <p>{{ item.body }}</p>
+        <footer class="blockquote-footer">
+          <cite>{{ item.citation }}</cite>
+        </footer>
+      </blockquote>
     </b-media>
   </ul>
 </template>
@@ -56,9 +53,3 @@ export default {
   
 }
 </script>
-
-<style>
-  .testimonial__custom {
-    border-top: 1px solid lightgray
-  }
-</style>

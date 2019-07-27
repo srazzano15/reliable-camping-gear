@@ -1,5 +1,5 @@
 <template>
-	<b-container fluid class="bg-dark mt-3">
+	<b-container fluid class="bg-dark py-3">
 		<b-row
 			align-v="center"
 			align-h="around"

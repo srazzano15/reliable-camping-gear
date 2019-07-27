@@ -33,11 +33,14 @@ Vue.component('partners', require('./components/layout/Partners.vue').default)
 Vue.component('news-events', require('./components/layout/NewsEvents.vue').default)
 Vue.component('home-carousel', require('./components/layout/HomeCarousel.vue').default)
 Vue.component('testimonials', require('./components/layout/Testimonials.vue').default)
-
+Vue.component('products', require('./components/layout/Products.vue').default)
+Vue.component('rcg-team', require('./components/layout/RcgTeam.vue').default)
 /**
  * Page Views
  */
 Vue.component('home-page', require('./components/pages/HomePage.vue').default)
+Vue.component('testimonial-page', require('./components/pages/TestimonialPage.vue').default)
+Vue.component('about-us', require('./components/pages/AboutUs.vue').default)
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

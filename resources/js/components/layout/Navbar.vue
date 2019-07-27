@@ -1,9 +1,13 @@
 <template>
-  <b-navbar sticky class="py-1 bg-secondary align-items-start">
+  <b-navbar 
+    sticky 
+    class="py-1 align-items-start"
+    :class="scroll > 80 ? 'logo__scrolling' : 'logo__main'"
+  >
     <b-navbar-brand href="/">
       <img 
         :src="brandLogo"
-        :class="scroll > 80 ? 'logo__scrolling' : 'logo__main'"
+        style="height: 15vh"
       >
     </b-navbar-brand>
 
@@ -49,12 +53,12 @@ export default {
           href: '/'
         },
         {
-          text: 'Products',
-          href: '/products'
+          text: 'Partners',
+          href: '#'
         },
         {
-          text: 'Where To Buy',
-          href: '/purchase'
+          text: 'Testimonials',
+          href: '/testimonials'
         },
         {
           text: 'Company',
@@ -110,8 +114,8 @@ export default {
     color: white;
   }
   .logo__main {
-    height: 15vh;
-    transition: height .3s ease-in-out
+    background: var(--secondary) !important;
+    transition: all .4s ease-in
   }
   .nav__custom {
     font-size: 1.25em;
@@ -119,7 +123,7 @@ export default {
     text-transform: uppercase;
   }
   .logo__scrolling {
-    height: 8vh;
-    transition: height .3s ease-in-out
+    background: linear-gradient(var(--secondary) 50%, transparent 50%) !important;
+    transition: all .2s ease-in
   }
 </style>
