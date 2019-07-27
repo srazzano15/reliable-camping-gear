@@ -2,7 +2,7 @@
   <b-navbar 
     sticky 
     class="py-1 align-items-start"
-    :class="scroll > 80 ? 'logo__scrolling' : 'logo__main'"
+    :class="scroll > 125 ? 'logo__scrolling' : 'logo__main'"
   >
     <b-navbar-brand href="/">
       <img 
@@ -114,8 +114,8 @@ export default {
     color: white;
   }
   .logo__main {
-    background: var(--secondary) !important;
-    transition: all .4s ease-in
+    background-color: var(--secondary) !important;
+    transition: background-color .4s ease-in
   }
   .nav__custom {
     font-size: 1.25em;
@@ -124,6 +124,6 @@ export default {
   }
   .logo__scrolling {
     background: linear-gradient(var(--secondary) 50%, transparent 50%) !important;
-    transition: all .2s ease-in
+    transition: background-image .5s ease-in
   }
 </style>

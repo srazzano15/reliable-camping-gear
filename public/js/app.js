@@ -34192,7 +34192,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".icon__custom[data-v-2c4263fa] {\n  font-size: 1.5em;\n  color: white;\n}\n.navbar-light .navbar-nav .nav-link[data-v-2c4263fa] {\n  color: white;\n}\n.logo__main[data-v-2c4263fa] {\n  background: var(--secondary) !important;\n  transition: all 0.4s ease-in;\n}\n.nav__custom[data-v-2c4263fa] {\n  font-size: 1.25em;\n  letter-spacing: 1.25px;\n  text-transform: uppercase;\n}\n.logo__scrolling[data-v-2c4263fa] {\n  background: linear-gradient(var(--secondary) 50%, transparent 50%) !important;\n  transition: all 0.2s ease-in;\n}", ""]);
+exports.push([module.i, ".icon__custom[data-v-2c4263fa] {\n  font-size: 1.5em;\n  color: white;\n}\n.navbar-light .navbar-nav .nav-link[data-v-2c4263fa] {\n  color: white;\n}\n.logo__main[data-v-2c4263fa] {\n  background-color: var(--secondary) !important;\n  transition: background-color 0.4s ease-in;\n}\n.nav__custom[data-v-2c4263fa] {\n  font-size: 1.25em;\n  letter-spacing: 1.25px;\n  text-transform: uppercase;\n}\n.logo__scrolling[data-v-2c4263fa] {\n  background: linear-gradient(var(--secondary) 50%, transparent 50%) !important;\n  transition: background-image 0.5s ease-in;\n}", ""]);
 
 // exports
 
@@ -84274,7 +84274,7 @@ var render = function() {
     "b-navbar",
     {
       staticClass: "py-1 align-items-start",
-      class: _vm.scroll > 80 ? "logo__scrolling" : "logo__main",
+      class: _vm.scroll > 125 ? "logo__scrolling" : "logo__main",
       attrs: { sticky: "" }
     },
     [
@@ -84882,7 +84882,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "b-container",
-    { staticClass: "px-0 white", attrs: { fluid: "" } },
+    { staticClass: "px-0 bg-white", attrs: { fluid: "" } },
     [
       _c(
         "b-row",

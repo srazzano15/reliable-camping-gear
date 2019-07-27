@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="px-0 white">
+  <b-container fluid class="px-0 bg-white">
     <b-row>
       <b-img
         fluid 
