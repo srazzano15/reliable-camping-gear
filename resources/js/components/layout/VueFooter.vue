@@ -1,5 +1,5 @@
 <template>
-	<b-container fluid class="bg-dark py-3">
+	<b-container fluid class="bg-dark pt-3">
 		<b-row
 			align-v="center"
 			align-h="around"
@@ -9,10 +9,9 @@
 				class="d-flex justify-content-center"
 			>
 				<b-nav vertical>
-				<b-nav-item v-for="(link, i) in links" :key="i" :href="link.href">{{
-					link.text
-				}}</b-nav-item>
-			</b-nav>
+					<b-nav-item v-for="(link, i) in links" :key="i" :href="link.href">
+					{{ link.text }}</b-nav-item>
+				</b-nav>
 			</b-col>
 
 			<b-col 
@@ -43,7 +42,16 @@
 			</b-col>
 		</b-row>
 
-		<b-row> </b-row>
+		<b-row align-h="end" class="footnote rcg__paragraph py-1">
+			<span class="mr-2">{{ footnote }} - {{ year }}  ||</span>
+			<span class="mr-2"> {{ dev }} </span>
+			<b-link 
+				href="https://www.linkedin.com/in/steve-razzano-79b9bb79/" 
+				target="_blank"
+				style="color: var(--rcg-green)"
+				class="mr-2"
+			> {{ author }}</b-link>
+		</b-row>
 	</b-container>
 </template>
 
@@ -54,7 +62,10 @@
 		props: ["brandLogo"],
 		data() {
 			return {
+				footnote: 'Copyright Reliable Camping Gear',
 				year: moment().year(),
+				dev: 'Developed by',
+				author: 'Steve Razzano - srazzano15@gmail.com',
 				links: [
 					{
 						text: "Company",
@@ -85,6 +96,11 @@
 }
 .footer__logo {
 	height: 10em !important;
+}
+.footnote {
+	background-color: var(--secondary);
+	color: white;
+	font-size: .9em;
 }
 </style>
 

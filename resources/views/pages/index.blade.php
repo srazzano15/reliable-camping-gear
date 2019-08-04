@@ -8,4 +8,6 @@
   <jumbotron></jumbotron>
 
   <home-page></home-page>
+
+  <mat-weight-modal></mat-weight-modal>
 @endsection

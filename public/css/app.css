@@ -12522,6 +12522,11 @@ input[type=color].form-control:disabled {
   opacity: 50;
 }
 
+.btn {
+  letter-spacing: 1px !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
+}
+
 /**
  ** RCG Custom Text Container Styles
 **/
@@ -12546,11 +12551,30 @@ input[type=color].form-control:disabled {
   text-transform: uppercase;
 }
 
+.rcg__header--sec {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .rcg__paragraph {
   line-height: 2;
   letter-spacing: 1.2px;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 1.1em;
+}
+
+.rcg__form__label {
+  letter-spacing: 2px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.rcg__btn--custom {
+  letter-spacing: 1px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.rcg__product_modal {
+  border-top: none !important;
 }
 
 /**
@@ -12579,4 +12603,6 @@ input[type=color].form-control:disabled {
   padding-left: 10% !important;
   padding-right: 10% !important;
 }
+
+/*** Variant Formatting ***/
 

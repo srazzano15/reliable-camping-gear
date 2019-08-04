@@ -9,7 +9,7 @@
       ></b-img>
     </b-row>
     <b-row align-h="center">
-      <h2 class="my-3 rcg__header w-25 text-center mx-auto">{{ header }}</h2>
+      <h2 class="mt-5 mb-3 rcg__header w-25 text-center mx-auto">{{ header }}</h2>
       <rcg-team></rcg-team>
     </b-row>
   </b-container>

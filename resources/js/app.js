@@ -35,6 +35,13 @@ Vue.component('home-carousel', require('./components/layout/HomeCarousel.vue').d
 Vue.component('testimonials', require('./components/layout/Testimonials.vue').default)
 Vue.component('products', require('./components/layout/Products.vue').default)
 Vue.component('rcg-team', require('./components/layout/RcgTeam.vue').default)
+Vue.component('contact-us', require('./components/layout/ContactUs.vue').default)
+
+/**
+ * Product Modals
+ */
+Vue.component('mat-weight-modal', require('./components/layout/product_modals/MatWeightModal.vue').default)
+
 /**
  * Page Views
  */

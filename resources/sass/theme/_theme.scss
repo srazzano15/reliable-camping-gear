@@ -4,41 +4,68 @@
  ** Author: Steve Razzano
 **/
 .nav__custom {
-  transition: all .25s ease-in-out !important;
-  &:hover {
-    text-decoration: underline
-  }
+    transition: all 0.25s ease-in-out !important;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .jumbotron__custom {
-  background-color: $rcg-green;
-  opacity: 50;
+    background-color: $rcg-green;
+    opacity: 50;
+}
+.btn {
+    letter-spacing: 1px !important;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
 }
 
 /**
  ** RCG Custom Text Container Styles
 **/
-.rcg__media__list--main {
-  line-height: 1.7;
-  letter-spacing: .8px;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  
-  &:not(:last-child) {
-    border-bottom: 1px solid lightgray;
+
+.rcg {
+  &__media__list--main {
+    line-height: 1.7;
+    letter-spacing: 0.8px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1em;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid lightgray;
+    }
   }
-}
-.rcg__header {
-  font-weight: 600;
-  font-size: 2.5em;
-  padding-bottom: 10px;
-  letter-spacing: 3px;
-  border-bottom: 3px solid var(--rcg-dark);
-  text-transform: uppercase;
-}
-.rcg__paragraph {
-  line-height: 2;
-  letter-spacing: 1.2px;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-size: 1.1em;
+
+  &__header {
+    font-weight: 600;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+    letter-spacing: 3px;
+    border-bottom: 3px solid var(--rcg-dark);
+    text-transform: uppercase;
+
+    &--sec {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+  &__paragraph {
+    line-height: 2;
+    letter-spacing: 1.2px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+  }
+
+  &__form__label {
+    letter-spacing: 2px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  }
+
+  &__btn--custom {
+    letter-spacing: 1px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  }
+
+  &__product_modal {
+    border-top: none !important;
+  }
 }

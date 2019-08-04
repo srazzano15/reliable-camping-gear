@@ -1,7 +1,7 @@
 <template>
   <b-container fluid class="pt-3 white">
     <b-row align-h="center">
-      <h2 class="my-3 rcg__header w-25 text-center mx-auto">{{ sectionHeaders.story }}</h2>
+      <h2 class="mt-5 mb-3 rcg__header w-25 text-center mx-auto">{{ sectionHeaders.story }}</h2>
       <p
         class="text-break mb-5 rcg__paragraph rcg__pad--h-8 text-center"
         v-for="(item, i) in sections"
@@ -11,7 +11,7 @@
 
     <b-row align-h="center">
       <b-col>
-        <h2 class="my-3 rcg__header w-25 text-center mx-auto">{{ sectionHeaders.product }}</h2>
+        <h2 class="mt-5 mb-3 rcg__header w-25 text-center mx-auto">{{ sectionHeaders.product }}</h2>
           <products></products>
       </b-col>
     </b-row>

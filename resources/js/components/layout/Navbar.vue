@@ -1,8 +1,7 @@
 <template>
   <b-navbar 
     sticky 
-    class="py-1 align-items-start"
-    :class="scroll > 125 ? 'logo__scrolling' : 'logo__main'"
+    class="py-1 align-items-start logo__scrolling"
   >
     <b-navbar-brand href="/">
       <img 
@@ -21,23 +20,27 @@
     <b-navbar-nav class="mr-3 mt-1 text-white">
       <b-nav-item 
         href="#" 
-        class="nav__custom" 
-        @click="modalHandler"
-      >Contact</b-nav-item>
+        class="nav__custom white"
+        v-b-modal.contact-us
+      >Contact US</b-nav-item>
+    </b-navbar-nav>
+    
+    <b-navbar-nav class="mr-1 mt-1 ml-auto">
+      <b-nav-text class="text-white rcg__header--sec">Find us on social media!</b-nav-text>
     </b-navbar-nav>
 
-    <b-navbar-nav class="mr-1 mt-1 ml-auto text-white">
-      <b-nav-item href="#" target="_blank"><i class="fab fa-facebook-square icon__custom"></i></b-nav-item>
+    <b-navbar-nav class="mr-1 mt-1 text-white">
+      <b-nav-item href="#" target="_blank">
+        <i class="fab fa-facebook-square icon__custom"></i>
+      </b-nav-item>
     </b-navbar-nav>
     
     <b-navbar-nav class="mr-1 mt-1 text-white">
-      <b-nav-item href="#" target="_blank"><i class="fab fa-instagram icon__custom"></i></b-nav-item>
+      <b-nav-item href="#" target="_blank">
+        <i class="fab fa-instagram icon__custom"></i>
+      </b-nav-item>
     </b-navbar-nav>
 
-    <b-nav-form>
-      <b-form-input class="p-2 m-2" placeholder="Search Site" size="sm"></b-form-input>
-      <b-button variant="outline-light" class="mx-2" type="submit" size="sm">Search</b-button>
-    </b-nav-form>
   </b-navbar>
 </template>
 
@@ -46,7 +49,6 @@ export default {
   props: ['brandLogo'],
   data() {
     return {
-      modal: false,
       nav: [
         {
           text: 'Home',
@@ -73,9 +75,6 @@ export default {
     
   },
   methods: {
-    modalHandler() {
-      this.modal = !this.modal
-    },
     scrolled() {
       // get current scroll position
       const currentPosition = window.pageYOffset || document.documentElement.scrollTop

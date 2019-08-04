@@ -20,6 +20,9 @@
 </head>
 <body>
     <div id="app" v-cloak class="bg-secondary">
+
+        <contact-us></contact-us>
+        
         <navigation-bar brand-logo="{{ asset('assets/images/logos/RCG_logo_250x250.png') }}"></navigation-bar>
 
         @yield('content')
