@@ -12511,6 +12511,7 @@ input[type=color].form-control:disabled {
 
 .nav__custom {
   transition: all 0.25s ease-in-out !important;
+  letter-spacing: 1.25px;
 }
 
 .nav__custom:hover {
@@ -12575,6 +12576,15 @@ input[type=color].form-control:disabled {
 
 .rcg__product_modal {
   border-top: none !important;
+}
+
+.rcg__icon--social {
+  font-size: 1.5em;
+  color: white;
+}
+
+.rcg__navbar--main {
+  background: linear-gradient(var(--secondary) 50%, transparent 50%) !important;
 }
 
 /**

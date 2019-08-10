@@ -2042,6 +2042,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['brandLogo'],
   data: function data() {
@@ -2088,6 +2114,41 @@ __webpack_require__.r(__webpack_exports__);
   },
   beforeDestroy: function beforeDestroy() {
     window.removeEventListener('scroll', this.scrolled);
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layout/NewProducts.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/layout/NewProducts.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      products: [{
+        href: 'assets/images/products/Reliable Camping Gear Trash Can - Utiity Final Aug 4 (1)-1.png'
+      }, {
+        href: 'assets/images/products/Rugs Stay Down 2019 (1)-1.png'
+      }]
+    };
   }
 });
 
@@ -2727,11 +2788,11 @@ __webpack_require__.r(__webpack_exports__);
         story: 'Our Story'
       },
       sections: [{
-        paragraph: "Our company was created base upon a RV camping injury. \n          Our co-founder Doug Razzano and son Steve where camping at Lee's Ferry, Arizona in 2018. \n          In the early morning excitement to go fly fish Doug accidentally kicked a placed three pound \n          rock off the Patio Mat corner which caused a black and blue big toe and in the following weeks \n          the loss of that toe nail. Not kidding."
+        paragraph: "Our co-founder Doug Razzano and son were camping \n          and fishing at Lee's Ferry, Arizona in 2018. In the early morning, \n          prior to sunrise and excitement to get to a fly fishing spot, \n          Doug accidentally kicked the previously placed three-pound rock \n          off the RV Patio Mat corner which caused a fall, a black and \n          blue toe and in the following weeks the loss of that toenail. Not kidding."
       }, {
-        paragraph: "In April 2019 Reliable Camping Gear was created on a windy\n          morning with co-founder Jeff Davis at an RV site when a gust of wind lifted \n          the Patio Mat, threw the placed rocks, tossed the camp chairs and witnessed the \n          trash can rolling away.  We just looked at each other and said, there has to be a \n          better way to have the \"Rugs Stay Down\"."
+        paragraph: "In April 2019 Reliable Camping Gear was founded on \n          a windy morning with co-founder Jeff Davis at an RV site, when \n          a gust of wind lifted the Patio Mat, threw the placed rocks, \n          tossed the chairs as we witnessed the trash can rolling away. \n          We just looked at each other and said there has to be a better \n          way to have the \"Rugs Stay Down.\"  At that moment, we agreed \n          to start a company focused on building safe and secure products \n          to prevent injuries and damage while camping."
       }, {
-        paragraph: "That morning we started measuring, sketching and crafting the initial \n          Rug Stay Down offering, the Trash Can utility weight and, the RV Antenna Tripod \n          product ideas. This burst of creativity was partly due to a few Bloody Marys that morning."
+        paragraph: "That morning we started measuring, sketching, and \n          crafting the initial Rugs Stay Down design, our Trash Can and \n          Utility weighting products. The burst of creativity was partly \n          enhanced, possibly by Bloody Marys."
       }]
     };
   }
@@ -34444,7 +34505,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".icon__custom[data-v-2c4263fa] {\n  font-size: 1.5em;\n  color: white;\n}\n.navbar-light .navbar-nav .nav-link[data-v-2c4263fa] {\n  color: white;\n}\n.logo__main[data-v-2c4263fa] {\n  background-color: var(--secondary) !important;\n  transition: background-color 0.4s ease-in;\n}\n.nav__custom[data-v-2c4263fa] {\n  font-size: 1.25em;\n  letter-spacing: 1.25px;\n  text-transform: uppercase;\n}\n.logo__scrolling[data-v-2c4263fa] {\n  background: linear-gradient(var(--secondary) 50%, transparent 50%) !important;\n  transition: background-image 0.5s ease-in;\n}", ""]);
+exports.push([module.i, ".navbar-light .navbar-nav .nav-link[data-v-2c4263fa] {\n  color: white;\n}\n\n/*  .logo__main {\n    background-color: var(--secondary) !important;\n    transition: background-color .4s ease-in\n  }\n  .nav__custom {\n    font-size: 1.25em;\n    letter-spacing: 1.25px;\n    text-transform: uppercase;\n  }\n  .logo__scrolling {\n    background: linear-gradient(var(--secondary) 50%, transparent 50%) !important;\n    transition: background-image .5s ease-in\n  } */", ""]);
 
 // exports
 
@@ -84676,7 +84737,7 @@ var render = function() {
   return _c(
     "b-navbar",
     {
-      staticClass: "py-1 align-items-start logo__scrolling",
+      staticClass: "py-1 align-items-start rcg__navbar--main",
       attrs: { sticky: "" }
     },
     [
@@ -84687,25 +84748,22 @@ var render = function() {
         })
       ]),
       _vm._v(" "),
-      _vm._l(_vm.nav, function(item, index) {
-        return _c(
-          "b-navbar-nav",
-          { key: index, staticClass: "mr-3 mt-1 text-white" },
-          [
-            _c(
-              "b-nav-item",
-              { staticClass: "nav__custom white", attrs: { href: item.href } },
-              [_vm._v(_vm._s(item.text))]
-            )
-          ],
-          1
-        )
-      }),
-      _vm._v(" "),
       _c(
         "b-navbar-nav",
         { staticClass: "mr-3 mt-1 text-white" },
         [
+          _vm._l(_vm.nav, function(item, index) {
+            return _c(
+              "b-nav-item",
+              {
+                key: index,
+                staticClass: "nav__custom text-uppercase",
+                attrs: { href: item.href }
+              },
+              [_vm._v(_vm._s(item.text))]
+            )
+          }),
+          _vm._v(" "),
           _c(
             "b-nav-item",
             {
@@ -84716,49 +84774,72 @@ var render = function() {
                   modifiers: { "contact-us": true }
                 }
               ],
-              staticClass: "nav__custom white",
+              staticClass: "nav__custom text-uppercase",
               attrs: { href: "#" }
             },
             [_vm._v("Contact US")]
           )
         ],
-        1
+        2
       ),
       _vm._v(" "),
       _c(
         "b-navbar-nav",
-        { staticClass: "mr-1 mt-1 ml-auto" },
+        { staticClass: "mr-1 mt-1 text-white ml-auto" },
         [
-          _c("b-nav-text", { staticClass: "text-white rcg__header--sec" }, [
-            _vm._v("Find us on social media!")
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-navbar-nav",
-        { staticClass: "mr-1 mt-1 text-white" },
-        [
+          _c(
+            "b-nav-text",
+            { staticClass: "text-white rcg__header--sec text-uppercase" },
+            [_vm._v("Find us on social media!")]
+          ),
+          _vm._v(" "),
           _c("b-nav-item", { attrs: { href: "#", target: "_blank" } }, [
-            _c("i", { staticClass: "fab fa-facebook-square icon__custom" })
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-navbar-nav",
-        { staticClass: "mr-1 mt-1 text-white" },
-        [
+            _c("i", { staticClass: "fab fa-facebook-square rcg__icon--social" })
+          ]),
+          _vm._v(" "),
           _c("b-nav-item", { attrs: { href: "#", target: "_blank" } }, [
-            _c("i", { staticClass: "fab fa-instagram icon__custom" })
+            _c("i", { staticClass: "fab fa-instagram rcg__icon--social" })
           ])
         ],
         1
       )
     ],
-    2
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layout/NewProducts.vue?vue&type=template&id=00ddb4ac&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/layout/NewProducts.vue?vue&type=template&id=00ddb4ac& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "m-3 rcg__pad" },
+    _vm._l(_vm.products, function(product) {
+      return _c("b-card", {
+        key: product.id,
+        staticClass: "p-4 mb-3",
+        attrs: { "img-src": product.href }
+      })
+    }),
+    1
   )
 }
 var staticRenderFns = []
@@ -85615,7 +85696,7 @@ var render = function() {
                 [_vm._v(_vm._s(_vm.sectionHeaders.product))]
               ),
               _vm._v(" "),
-              _c("products")
+              _c("new-products")
             ],
             1
           )
@@ -97872,6 +97953,7 @@ Vue.component('testimonials', __webpack_require__(/*! ./components/layout/Testim
 Vue.component('products', __webpack_require__(/*! ./components/layout/Products.vue */ "./resources/js/components/layout/Products.vue")["default"]);
 Vue.component('rcg-team', __webpack_require__(/*! ./components/layout/RcgTeam.vue */ "./resources/js/components/layout/RcgTeam.vue")["default"]);
 Vue.component('contact-us', __webpack_require__(/*! ./components/layout/ContactUs.vue */ "./resources/js/components/layout/ContactUs.vue")["default"]);
+Vue.component('new-products', __webpack_require__(/*! ./components/layout/NewProducts.vue */ "./resources/js/components/layout/NewProducts.vue")["default"]);
 /**
  * Product Modals
  */
@@ -98261,6 +98343,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_2c4263fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_2c4263fa_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/layout/NewProducts.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/layout/NewProducts.vue ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _NewProducts_vue_vue_type_template_id_00ddb4ac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NewProducts.vue?vue&type=template&id=00ddb4ac& */ "./resources/js/components/layout/NewProducts.vue?vue&type=template&id=00ddb4ac&");
+/* harmony import */ var _NewProducts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NewProducts.vue?vue&type=script&lang=js& */ "./resources/js/components/layout/NewProducts.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NewProducts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NewProducts_vue_vue_type_template_id_00ddb4ac___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _NewProducts_vue_vue_type_template_id_00ddb4ac___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/layout/NewProducts.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/layout/NewProducts.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/layout/NewProducts.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewProducts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./NewProducts.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layout/NewProducts.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NewProducts_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/layout/NewProducts.vue?vue&type=template&id=00ddb4ac&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/layout/NewProducts.vue?vue&type=template&id=00ddb4ac& ***!
+  \***************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NewProducts_vue_vue_type_template_id_00ddb4ac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./NewProducts.vue?vue&type=template&id=00ddb4ac& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layout/NewProducts.vue?vue&type=template&id=00ddb4ac&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NewProducts_vue_vue_type_template_id_00ddb4ac___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NewProducts_vue_vue_type_template_id_00ddb4ac___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

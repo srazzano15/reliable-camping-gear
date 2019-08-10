@@ -1,7 +1,8 @@
 <template>
   <b-navbar 
     sticky 
-    class="py-1 align-items-start logo__scrolling"
+    class="py-1 align-items-start rcg__navbar--main"
+    v-cloak
   >
     <b-navbar-brand href="/">
       <img 
@@ -10,22 +11,47 @@
       >
     </b-navbar-brand>
 
-    <b-navbar-nav class="mr-3 mt-1 text-white" v-for="(item, index) in nav" :key="index">
+    <b-navbar-nav class="mr-3 mt-1 text-white" >
       <b-nav-item 
         :href="item.href" 
-        class="nav__custom white"
+        class="nav__custom text-uppercase"
+        v-for="(item, index) in nav" :key="index"
       >{{ item.text }}</b-nav-item>
+
+      <b-nav-item 
+        href="#" 
+        class="nav__custom text-uppercase"
+        v-b-modal.contact-us
+      >Contact US</b-nav-item>
     </b-navbar-nav>
 
-    <b-navbar-nav class="mr-3 mt-1 text-white">
+    
+    <b-navbar-nav class="mr-1 mt-1 text-white ml-auto">
+
+      <b-nav-text 
+        class="text-white rcg__header--sec text-uppercase"
+      >Find us on social media!</b-nav-text>
+
+      <b-nav-item href="#" target="_blank">
+        <i class="fab fa-facebook-square rcg__icon--social"></i>
+      </b-nav-item>
+
+      <b-nav-item href="#" target="_blank">
+        <i class="fab fa-instagram rcg__icon--social"></i>
+      </b-nav-item>
+
+    </b-navbar-nav>
+    
+
+    <!-- <b-navbar-nav class="mr-3 mt-1 text-white">
       <b-nav-item 
         href="#" 
         class="nav__custom white"
         v-b-modal.contact-us
       >Contact US</b-nav-item>
-    </b-navbar-nav>
+    </b-navbar-nav> -->
     
-    <b-navbar-nav class="mr-1 mt-1 ml-auto">
+    <!-- <b-navbar-nav class="mr-1 mt-1 ml-auto">
       <b-nav-text class="text-white rcg__header--sec">Find us on social media!</b-nav-text>
     </b-navbar-nav>
 
@@ -39,7 +65,7 @@
       <b-nav-item href="#" target="_blank">
         <i class="fab fa-instagram icon__custom"></i>
       </b-nav-item>
-    </b-navbar-nav>
+    </b-navbar-nav> -->
 
   </b-navbar>
 </template>
@@ -105,14 +131,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .icon__custom {
-    font-size: 1.5em;
-    color: white;
-  }
+
   .navbar-light .navbar-nav .nav-link {
     color: white;
   }
-  .logo__main {
+/*  .logo__main {
     background-color: var(--secondary) !important;
     transition: background-color .4s ease-in
   }
@@ -124,5 +147,5 @@ export default {
   .logo__scrolling {
     background: linear-gradient(var(--secondary) 50%, transparent 50%) !important;
     transition: background-image .5s ease-in
-  }
+  } */
 </style>

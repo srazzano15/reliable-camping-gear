@@ -5,6 +5,10 @@
 **/
 .nav__custom {
     transition: all 0.25s ease-in-out !important;
+    //font-size: 1.25rem;
+    letter-spacing: 1.25px;
+    //text-transform: uppercase;
+
     &:hover {
         text-decoration: underline;
     }
@@ -67,5 +71,14 @@
 
   &__product_modal {
     border-top: none !important;
+  }
+
+  &__icon--social {
+    font-size: 1.5em;
+    color: white;
+  }
+
+  &__navbar--main {
+    background: linear-gradient(var(--secondary) 50%, transparent 50%) !important;
   }
 }

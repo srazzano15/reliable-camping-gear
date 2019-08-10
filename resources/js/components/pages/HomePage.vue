@@ -12,7 +12,7 @@
     <b-row align-h="center">
       <b-col>
         <h2 class="mt-5 mb-3 rcg__header w-25 text-center mx-auto">{{ sectionHeaders.product }}</h2>
-          <products></products>
+          <new-products></new-products>
       </b-col>
     </b-row>
   </b-container>
@@ -29,23 +29,28 @@ export default {
       },
       sections: [
         {
-          paragraph: `Our company was created base upon a RV camping injury. 
-          Our co-founder Doug Razzano and son Steve where camping at Lee's Ferry, Arizona in 2018. 
-          In the early morning excitement to go fly fish Doug accidentally kicked a placed three pound 
-          rock off the Patio Mat corner which caused a black and blue big toe and in the following weeks 
-          the loss of that toe nail. Not kidding.`
+          paragraph: `Our co-founder Doug Razzano and son were camping 
+          and fishing at Lee's Ferry, Arizona in 2018. In the early morning, 
+          prior to sunrise and excitement to get to a fly fishing spot, 
+          Doug accidentally kicked the previously placed three-pound rock 
+          off the RV Patio Mat corner which caused a fall, a black and 
+          blue toe and in the following weeks the loss of that toenail. Not kidding.`
         },
         {
-          paragraph: `In April 2019 Reliable Camping Gear was created on a windy
-          morning with co-founder Jeff Davis at an RV site when a gust of wind lifted 
-          the Patio Mat, threw the placed rocks, tossed the camp chairs and witnessed the 
-          trash can rolling away.  We just looked at each other and said, there has to be a 
-          better way to have the "Rugs Stay Down".`
+          paragraph: `In April 2019 Reliable Camping Gear was founded on 
+          a windy morning with co-founder Jeff Davis at an RV site, when 
+          a gust of wind lifted the Patio Mat, threw the placed rocks, 
+          tossed the chairs as we witnessed the trash can rolling away. 
+          We just looked at each other and said there has to be a better 
+          way to have the "Rugs Stay Down."  At that moment, we agreed 
+          to start a company focused on building safe and secure products 
+          to prevent injuries and damage while camping.`
         },
         {
-          paragraph: `That morning we started measuring, sketching and crafting the initial 
-          Rug Stay Down offering, the Trash Can utility weight and, the RV Antenna Tripod 
-          product ideas. This burst of creativity was partly due to a few Bloody Marys that morning.`
+          paragraph: `That morning we started measuring, sketching, and 
+          crafting the initial Rugs Stay Down design, our Trash Can and 
+          Utility weighting products. The burst of creativity was partly 
+          enhanced, possibly by Bloody Marys.`
         }
       ]
     }

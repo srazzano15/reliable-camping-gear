@@ -36,6 +36,8 @@ Vue.component('testimonials', require('./components/layout/Testimonials.vue').de
 Vue.component('products', require('./components/layout/Products.vue').default)
 Vue.component('rcg-team', require('./components/layout/RcgTeam.vue').default)
 Vue.component('contact-us', require('./components/layout/ContactUs.vue').default)
+Vue.component('new-products', require('./components/layout/NewProducts.vue').default)
+
 
 /**
  * Product Modals
