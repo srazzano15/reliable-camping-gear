@@ -12614,5 +12614,10 @@ input[type=color].form-control:disabled {
   padding-right: 10% !important;
 }
 
+.rcg__pad--h-15 {
+  padding-left: 15% !important;
+  padding-right: 15% !important;
+}
+
 /*** Variant Formatting ***/
 

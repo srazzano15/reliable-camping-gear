@@ -29,7 +29,7 @@
     <b-navbar-nav class="mr-1 mt-1 text-white ml-auto">
 
       <b-nav-text 
-        class="text-white rcg__header--sec text-uppercase"
+        class="text-white rcg__header--sec text-uppercase mr-2"
       >Find us on social media!</b-nav-text>
 
       <b-nav-item href="#" target="_blank">
@@ -38,6 +38,10 @@
 
       <b-nav-item href="#" target="_blank">
         <i class="fab fa-instagram rcg__icon--social"></i>
+      </b-nav-item>
+
+      <b-nav-item href="#" target="_blank">
+        <i class="fab fa-youtube-square rcg__icon--social"></i>
       </b-nav-item>
 
     </b-navbar-nav>

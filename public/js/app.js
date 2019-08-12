@@ -2068,6 +2068,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['brandLogo'],
   data: function data() {
@@ -2140,15 +2144,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       products: [{
-        href: 'assets/images/products/Reliable Camping Gear Trash Can - Utiity Final Aug 4 (1)-1.png'
-      }, {
         href: 'assets/images/products/Rugs Stay Down 2019 (1)-1.png'
+      }, {
+        href: 'assets/images/products/Reliable Camping Gear Trash Can - Utiity Final Aug 4 (1)-1.png'
       }]
     };
+  },
+  methods: {
+    downloadPdf: function downloadPdf(document) {
+      var doc = document;
+    }
   }
 });
 
@@ -84789,7 +84813,7 @@ var render = function() {
         [
           _c(
             "b-nav-text",
-            { staticClass: "text-white rcg__header--sec text-uppercase" },
+            { staticClass: "text-white rcg__header--sec text-uppercase mr-2" },
             [_vm._v("Find us on social media!")]
           ),
           _vm._v(" "),
@@ -84799,6 +84823,10 @@ var render = function() {
           _vm._v(" "),
           _c("b-nav-item", { attrs: { href: "#", target: "_blank" } }, [
             _c("i", { staticClass: "fab fa-instagram rcg__icon--social" })
+          ]),
+          _vm._v(" "),
+          _c("b-nav-item", { attrs: { href: "#", target: "_blank" } }, [
+            _c("i", { staticClass: "fab fa-youtube-square rcg__icon--social" })
           ])
         ],
         1
@@ -84831,13 +84859,42 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "m-3 rcg__pad" },
+    { staticClass: "m-3 rcg__pad--h-15" },
     _vm._l(_vm.products, function(product) {
-      return _c("b-card", {
-        key: product.id,
-        staticClass: "p-4 mb-3",
-        attrs: { "img-src": product.href }
-      })
+      return _c(
+        "b-card",
+        {
+          key: product.id,
+          staticClass: "p-4 mb-3",
+          attrs: { "img-src": product.href }
+        },
+        [
+          _c(
+            "b-card-footer",
+            {
+              attrs: {
+                "footer-bg-variant": "transparent",
+                "footer-class": "d-flex justify-content-around px-0"
+              }
+            },
+            [
+              _c(
+                "b-button",
+                { staticClass: "flex-grow-1 mx-2", attrs: { href: "#" } },
+                [_vm._v("Button 1")]
+              ),
+              _vm._v(" "),
+              _c(
+                "b-button",
+                { staticClass: "flex-grow-1 mx-2", attrs: { href: "#" } },
+                [_vm._v("Button 2")]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
     }),
     1
   )
