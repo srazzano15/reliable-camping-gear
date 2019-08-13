@@ -80,7 +80,14 @@ export default {
   },
   methods: {
     submitForm() {
-      console.log('Form submission was captured')
+      const msg = {
+        to: 'srazzano15@gmail.com',
+        from: 'srazzano15@gmail.com',
+        subject: 'sent with VueJS',
+        text: 'this actually works',
+        html: '<p>this actually works</p>'
+      }
+      sgMail.send(msg)
     }
   },
 }

@@ -43,7 +43,7 @@ Vue.component('new-products', require('./components/layout/NewProducts.vue').def
  * Product Modals
  */
 Vue.component('mat-weight-modal', require('./components/layout/product_modals/MatWeightModal.vue').default)
-
+Vue.component('tripod-utility-modal', require('./components/layout/product_modals/TripodUtilityModal.vue').default)
 /**
  * Page Views
  */

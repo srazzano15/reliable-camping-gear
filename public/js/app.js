@@ -1844,7 +1844,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submitForm: function submitForm() {
-      console.log('Form submission was captured');
+      var msg = {
+        to: 'srazzano15@gmail.com',
+        from: 'srazzano15@gmail.com',
+        subject: 'sent with VueJS',
+        text: 'this actually works',
+        html: '<p>this actually works</p>'
+      };
+      sgMail.send(msg);
     }
   }
 });
@@ -2159,19 +2166,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       products: [{
-        href: 'assets/images/products/Rugs Stay Down 2019 (1)-1.png'
+        href: 'assets/images/products/Rugs Stay Down 2019 (1)-1.png',
+        filename: 'RCG_Rugs_Stay_Down_Infodoc_2019.pdf',
+        filePath: 'assets/pdf/Rugs Stay Down 2019.pdf',
+        id: 'rug-stay-down',
+        modal: 'mat-weight-modal'
       }, {
-        href: 'assets/images/products/Reliable Camping Gear Trash Can - Utiity Final Aug 4 (1)-1.png'
-      }]
+        href: 'assets/images/products/Reliable Camping Gear Trash Can - Utiity Final Aug 4 (1)-1.png',
+        filename: 'RCG_Tripod_Trashcan_Utility_Infodoc_2019.pdf',
+        filePath: 'assets/pdf/Reliable Camping Gear Trash Can - Utiity Final Aug 4.pdf',
+        id: 'utility-weight',
+        modal: 'tripod-trashcan-modal'
+      }],
+      buttons: ['Open Gallery', 'Download PDF']
     };
   },
   methods: {
-    downloadPdf: function downloadPdf(document) {
-      var doc = document;
+    openModal: function openModal(id) {
+      this.$bvModal.show(id);
     }
   }
 });
@@ -2720,6 +2740,71 @@ __webpack_require__.r(__webpack_exports__);
         src: '/assets/images/products/mat_weight_1_450x450.png'
       }, {
         src: '/assets/images/products/mat_weight_2_450x450.png'
+      }, {
+        src: '/assets/images/products/mat_weight_1_450x450.png'
+      }, {
+        src: '/assets/images/products/mat_weight_2_450x450.png'
+      }]
+    };
+  },
+  methods: {
+    onSlideStart: function onSlideStart(slide) {
+      this.sliding = true;
+    },
+    onSlideEnd: function onSlideEnd(slide) {
+      this.sliding = false;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      slide: 0,
+      images: [{
+        src: '/assets/images/products/mat_weight_2_450x450.png'
+      }, {
+        src: '/assets/images/products/mat_weight_1_450x450.png'
       }, {
         src: '/assets/images/products/mat_weight_1_450x450.png'
       }, {
@@ -25660,7 +25745,7 @@ var hasIntersectionObserverSupport = isBrowser && 'IntersectionObserver' in wind
 
 var getEnv = function getEnv(key) {
   var fallback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  var env = typeof process !== 'undefined' && process ? Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","NODE_ENV":"development"}) || false : {};
+  var env = typeof process !== 'undefined' && process ? Object({"MIX_PUSHER_APP_CLUSTER":"mt1","MIX_PUSHER_APP_KEY":"","MIX_SENDGRID_API_KEY":"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","NODE_ENV":"development"}) || false : {};
 
   if (!key) {
     /* istanbul ignore next */
@@ -84880,14 +84965,33 @@ var render = function() {
             [
               _c(
                 "b-button",
-                { staticClass: "flex-grow-1 mx-2", attrs: { href: "#" } },
-                [_vm._v("Button 1")]
+                {
+                  directives: [
+                    {
+                      name: "b-modal",
+                      rawName: "v-b-modal",
+                      value: product.modal,
+                      expression: "product.modal"
+                    }
+                  ],
+                  staticClass: "flex-grow-1 mr-3",
+                  attrs: { variant: "rcg-purple", size: "lg" }
+                },
+                [_vm._v(_vm._s(_vm.buttons[0]))]
               ),
               _vm._v(" "),
               _c(
                 "b-button",
-                { staticClass: "flex-grow-1 mx-2", attrs: { href: "#" } },
-                [_vm._v("Button 2")]
+                {
+                  staticClass: "flex-grow-1 ml-3",
+                  attrs: {
+                    variant: "rcg-purple",
+                    href: product.filePath,
+                    download: product.filename,
+                    size: "lg"
+                  }
+                },
+                [_vm._v(_vm._s(_vm.buttons[1]))]
               )
             ],
             1
@@ -85604,6 +85708,73 @@ var render = function() {
         {
           attrs: {
             id: "mat-weight-carousel",
+            width: "450",
+            controls: "",
+            indicators: ""
+          },
+          model: {
+            value: _vm.slide,
+            callback: function($$v) {
+              _vm.slide = $$v
+            },
+            expression: "slide"
+          }
+        },
+        _vm._l(_vm.images, function(image) {
+          return _c("b-carousel-slide", {
+            key: image.id,
+            attrs: { "img-src": image.src }
+          })
+        }),
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=template&id=1a4ed68c&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=template&id=1a4ed68c& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-modal",
+    {
+      attrs: {
+        id: "tripod-trashcan-modal",
+        size: "lg",
+        "body-bg-variant": "dark",
+        "hide-header": "",
+        "ok-only": "",
+        "ok-title": "Close",
+        "footer-bg-variant": "dark",
+        "footer-class": "rcg__product_modal",
+        "ok-variant": "rcg-blue"
+      }
+    },
+    [
+      _c(
+        "b-carousel",
+        {
+          attrs: {
+            id: "tripod-trashcan-carousel",
             width: "450",
             controls: "",
             indicators: ""
@@ -98016,6 +98187,7 @@ Vue.component('new-products', __webpack_require__(/*! ./components/layout/NewPro
  */
 
 Vue.component('mat-weight-modal', __webpack_require__(/*! ./components/layout/product_modals/MatWeightModal.vue */ "./resources/js/components/layout/product_modals/MatWeightModal.vue")["default"]);
+Vue.component('tripod-utility-modal', __webpack_require__(/*! ./components/layout/product_modals/TripodUtilityModal.vue */ "./resources/js/components/layout/product_modals/TripodUtilityModal.vue")["default"]);
 /**
  * Page Views
  */
@@ -98090,6 +98262,13 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/**
+ * Bootstrap SendGrid's API to send emails for us.
+ */
+
+/* window.sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.MIX_SENDGRID_API_KEY) */
 
 /***/ }),
 
@@ -99006,6 +99185,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MatWeightModal_vue_vue_type_template_id_185e0654___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MatWeightModal_vue_vue_type_template_id_185e0654___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/layout/product_modals/TripodUtilityModal.vue":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/layout/product_modals/TripodUtilityModal.vue ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TripodUtilityModal_vue_vue_type_template_id_1a4ed68c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TripodUtilityModal.vue?vue&type=template&id=1a4ed68c& */ "./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=template&id=1a4ed68c&");
+/* harmony import */ var _TripodUtilityModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TripodUtilityModal.vue?vue&type=script&lang=js& */ "./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _TripodUtilityModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TripodUtilityModal_vue_vue_type_template_id_1a4ed68c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TripodUtilityModal_vue_vue_type_template_id_1a4ed68c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/layout/product_modals/TripodUtilityModal.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TripodUtilityModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./TripodUtilityModal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TripodUtilityModal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=template&id=1a4ed68c&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=template&id=1a4ed68c& ***!
+  \*************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TripodUtilityModal_vue_vue_type_template_id_1a4ed68c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./TripodUtilityModal.vue?vue&type=template&id=1a4ed68c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/layout/product_modals/TripodUtilityModal.vue?vue&type=template&id=1a4ed68c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TripodUtilityModal_vue_vue_type_template_id_1a4ed68c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TripodUtilityModal_vue_vue_type_template_id_1a4ed68c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

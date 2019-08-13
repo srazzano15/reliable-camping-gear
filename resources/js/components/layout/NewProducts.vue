@@ -11,15 +11,19 @@
         footer-class="d-flex justify-content-around px-0"
       >
         <b-button
-          href="#"
-          class="flex-grow-1 mx-2"
+          class="flex-grow-1 mr-3"
+          variant="rcg-purple"
+          size="lg"
+          v-b-modal="product.modal"
+        >{{ buttons[0] }}</b-button>
 
-        >Button 1</b-button>
-
-        <b-button 
-          href="#"
-          class="flex-grow-1 mx-2"
-        >Button 2</b-button>
+        <b-button
+          variant="rcg-purple"
+          :href="product.filePath" 
+          :download="product.filename" 
+          class="flex-grow-1 ml-3"
+          size="lg"
+        >{{ buttons[1] }}</b-button>
       </b-card-footer>
     </b-card>
   </div>
@@ -31,19 +35,29 @@ export default {
     return {
       products: [        
         {
-          href: 'assets/images/products/Rugs Stay Down 2019 (1)-1.png'
+          href: 'assets/images/products/Rugs Stay Down 2019 (1)-1.png',
+          filename: 'RCG_Rugs_Stay_Down_Infodoc_2019.pdf',
+          filePath: 'assets/pdf/Rugs Stay Down 2019.pdf',
+          id: 'rug-stay-down',
+          modal: 'mat-weight-modal'
         },
         {
-          href: 'assets/images/products/Reliable Camping Gear Trash Can - Utiity Final Aug 4 (1)-1.png'
-        }        
+          href: 'assets/images/products/Reliable Camping Gear Trash Can - Utiity Final Aug 4 (1)-1.png',
+          filename: 'RCG_Tripod_Trashcan_Utility_Infodoc_2019.pdf',
+          filePath: 'assets/pdf/Reliable Camping Gear Trash Can - Utiity Final Aug 4.pdf',
+          id: 'utility-weight',
+          modal: 'tripod-trashcan-modal'
+        }    
+      ],
+      buttons: [
+        'Open Gallery',
+        'Download PDF'
       ]
     }
   },
   methods: {
-    downloadPdf(document) {
-      let doc = document
-
-      
+    openModal(id) {
+      this.$bvModal.show(id)
     }
   }
 }

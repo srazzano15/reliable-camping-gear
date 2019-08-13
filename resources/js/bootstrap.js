@@ -53,3 +53,9 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/**
+ * Bootstrap SendGrid's API to send emails for us.
+ */
+/* window.sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.MIX_SENDGRID_API_KEY) */

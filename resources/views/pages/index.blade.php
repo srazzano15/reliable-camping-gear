@@ -10,4 +10,5 @@
   <home-page></home-page>
 
   <mat-weight-modal></mat-weight-modal>
+  <tripod-utility-modal></tripod-utility-modal>
 @endsection
