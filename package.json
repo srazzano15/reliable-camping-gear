@@ -16,7 +16,7 @@
         "bootstrap-vue": "^2.0.0-rc.21",
         "cross-env": "^5.1",
         "fs": "0.0.1-security",
-        "jquery": "^3.2",
+        "jquery": "^3.5",
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.5",
         "moment": "^2.24.0",
